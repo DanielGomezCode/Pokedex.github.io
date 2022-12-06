@@ -1,0 +1,400 @@
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+
+html
+    scroll-behavior: 
+
+
+body
+    background-color: rgb(255, 61, 61)
+
+
+.header
+    display: flex
+    justify-content: space-between
+    vertical-align: center
+    align-items: center
+    background-color: white
+    padding: 10px 20px
+    border-bottom: 2px solid black
+
+
+.header img
+    width: 150px
+    margin-right: 130px
+
+
+.btn-header i
+    font-size: 25px
+    padding: 10px
+    background-color: red
+    border: 2px solid black
+    border-radius: 100px
+    color: rgb(255, 255, 255)
+    cursor: pointer
+    transition: .5s
+
+
+.btn-header i:hover
+    background-color: #000
+    transition: .5s
+
+    
+.pokedex-container
+    transition: .10s ease
+    padding: 20px 0
+    background: rgb(0, 162, 255)
+
+
+form 
+    width: 300px
+    margin: 20px auto 60px
+
+
+input 
+    width: 100%
+    padding: 10px
+    border-radius: 100px
+    border: 2px solid rgb(0, 0, 0)
+    font-family: 'poppins', monospace
+
+
+.poke-card
+    position: relative
+    height: fit-content
+    font-family: 'poppins', monospace
+    max-width: 300px
+    color: #000
+    text-align: center
+    padding: 10px
+    margin: 0 auto
+    background-color: #FFF
+    border: 1px solid black
+    border-radius: 20px
+
+
+.poke-card::before 
+    content: ''
+    background-size: 3px 3px
+    border-radius: 4px
+    height: 100%
+    width: 100%
+    position: absolute
+    left: 10px
+    top: 10px
+    z-index: -1
+
+
+.img-container 
+    position: relative
+    width: 180px
+    margin: 10px auto
+
+
+.poke-stats div
+    display: flex
+    justify-content: space-between
+    align-content: space-between
+    padding: 5px
+    font-size: 18px
+
+
+.poke-types div
+    padding: 5px
+    margin: 5px
+    border-radius: 4px
+    border: 1px dashed black
+
+
+.poke-img 
+    width: 180px
+    border-radius: 50%
+
+
+@media screen and (max-width:1300px)
+    .pokedex-img-content img
+        width: 300px
+    
+
+
+/* Header Secundario */
+
+.navegador
+    width: 250px
+    min-height: 100vh
+    background: white
+    position: fixed
+    top: 0
+    right: 100%
+    border-left: 1px solid black
+    transition: 1s
+
+.navegador.active
+    right: 0
+    transition: 1s
+
+.navegador-container
+    display: flex
+    justify-content: end
+    padding: 20px
+
+.navegador-container i
+    font-size: 25px
+    color: red
+    cursor: pointer
+    transition: .5s
+
+
+.navegador-container i:hover
+    color: rgb(0, 0, 0)
+    transition: .5s
+
+
+.pokeball
+    text-align: center
+    padding-bottom: 40px;
+    border-bottom: 1px solid black
+
+
+.pokeball img
+    width: 80px
+
+
+.navegador-links
+    display: flex
+    flex-direction: column
+    padding: 20px
+    border-bottom: 1px solid black
+
+
+.navegador-links a
+    font-size: 20px
+    font-family: 'poppins', sans-serif
+    text-decoration: none
+    color: black
+    margin: 5px 0
+    text-transform: uppercase
+    font-weight: 700
+    transition: .5s
+
+
+.navegador-links a i
+    padding-right: 10px
+
+
+.navegador-redes
+    display: flex
+    flex-direction: column
+    padding: 20px
+
+
+.navegador-redes i
+    padding: 8px
+    border-radius: 100px
+    border: 2px solid black
+    background-color: red
+    font-size: 30px
+    color: rgb(255, 255, 255)
+    margin: 10px 0
+    font-weight: 700
+    text-align: center
+    cursor: pointer
+
+
+.navegador-redes p
+    font-size: 8px
+    text-align: center
+    padding-top: 20px
+    font-family: 'poppins'
+    font-style: italic
+    color: rgb(66, 66, 66)
+
+
+.inicio-banner
+    display: flex
+    justify-content: space-between
+    padding: 50px
+    transition: .5s
+
+
+.banner-imagen img
+    width: 450px
+
+
+.banner-informacion
+    display: flex
+    flex-direction: column
+
+
+.banner-informacion h1
+    font-size: 100px
+    font-family: 'impact', sans-serif
+    line-height: 100px
+    color: white
+    font-weight: 400
+
+
+.banner-informacion p
+    font-size: 20px
+    padding-right: 70px
+    font-family: 'poppins'
+    font-weight: 800
+    line-height: 20px
+    padding-top: 20px
+    color: white
+    font-weight: 500
+
+
+.banner-informacion a
+    display: inline-block
+    margin-top: 40px
+    padding: 8px 20px
+    background-color: red
+    border-radius: 100px
+    width: 30%
+    text-align: center
+    border: 4px solid rgb(255, 255, 255)
+    font-size: 16px
+    text-decoration: none
+    color: white
+    font-family: 'poppins'
+
+
+@media screen and (max-width:1300px)
+    .banner-imagen img
+        width: 300px
+    
+
+@media screen and (max-width:970px)
+    .banner-informacion h1
+        font-size: 70px
+        line-height: 70px
+    
+
+    .banner-informacion p
+        font-size: 16px
+    
+
+    .banner-informacion a
+        width: 80%
+    
+
+
+@media screen and (max-width:970px)
+    .banner-imagen img
+        width: 250px
+    
+    .banner-informacion h1
+        font-size: 50px
+        line-height: 50px
+    
+
+    .banner-informacion p
+        font-size: 14px
+        padding-right: 10px
+    
+
+    .banner-informacion a
+        width: 80%
+        margin-top: 20px
+        font-size: 14px
+    
+
+
+@media screen and (max-width:580px)
+    .inicio-banner
+        width: 100%
+        flex-wrap: wrap
+    
+
+    .banner-informacion
+        order: 1
+        text-align: center
+    
+
+    .banner-informacion a
+        width: 100%
+        margin: 20 auto
+    
+
+    .banner-imagen
+        order: 0
+        width: 100%
+        text-align: center
+    
+@media screen and (max-width:410px)
+    .banner-imagen img
+        width: 280px
+    
+
+    .banner-informacion h1
+        font-size: 34px
+        font-family: 'poppins'
+        font-weight: 700
+        line-height: 35px
+    
+
+.how-to-use
+    width: 100%
+    background-color: #000
+    display: flex
+    justify-content: center
+    align-items: center
+    color: white
+    padding: 20px
+
+
+.how-box
+    width: 33%
+    display: flex
+    justify-content: center
+    align-items: center
+
+
+.how-box h3
+    font-size: 16px
+    font-family: 'poppins', sans-serif
+    font-weight: 400
+    line-height: 24px
+
+
+.how-box img
+    width: 100px
+
+
+@media screen and (max-width: 1000px)
+    .how-to-use
+        flex-wrap: wrap
+    
+    .how-box img
+        width: 80px
+    
+
+    .how-box h3
+        font-size: 14px
+        line-height: 18px
+    
+
+
+@media screen and (max-width: 1000px)
+    .how-box
+        width: 50%
+    
+
+
+@media screen and (max-width: 600px)
+    .how-box
+        width: 100%
+    
+
+    .how-box img
+        width: 60px
+    
+
+    .how-box h3
+        font-size: 12px
+        line-height: 14px
+    

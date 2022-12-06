@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon || Pokedex</title>
+    <!-- Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:ital,wght@0,600;0,800;1,400&display=swap" rel="stylesheet">
+    <!-- links CSS-->
+    <link rel="icon" href="img/poke-shadow.png">
+    <link rel="stylesheet" href="fontawesome/fontawesome-free-6.1.1-web/css/all.css">
+    <link rel="stylesheet" href="css/style.sass">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!--Header Pokemon-->
+    <header class="header">
+        <img src="img/pokemon-logo.png" alt="">
+        <div class="btn-header">
+            <i class="fa-solid fa-bars-staggered"></i>
+        </div>
+    </header>
+
+    <!--Banner Inicio-->
+    <section id="inicio" class="inicio-banner">
+        <div class="banner-informacion">
+            <h1>¡¡ENCUENTRA TU POKEMON FAVORITO!!</h1>
+            <p>¡¡Con nuestra pokedex de nuestra primera generacion podras encontrar tu pokemon favorito en cuestion de poke-segundos!!</p>
+            <a href="">Buscar mi pokemon</a>
+        </div>
+        <div class="banner-imagen">
+            <img src="img/pikachu-2.png" alt="">
+        </div>
+    </section>
+
+    <!--¿Como usar la pokedex?-->
+    <article id="como-buscar" class="how-to-use">
+        <div class="how-box">
+            <img src="img/Poké_Ball_icon.png" alt="">
+            <h3>Dirigete a tu pokedex y comienza con tu poke-busqueda</h3>
+        </div>
+        <div class="how-box">
+            <img src="img/Poké_Ball_icon.png" alt="">
+            <h3>En la barra de busqueda, escribe el poke-nombre de tu pokemon favorito</h3>
+        </div>
+        <div class="how-box">
+            <img src="img/Poké_Ball_icon.png" alt="">
+            <h3>Descubre sus habilidades, sus caracteristicas y su poke-imagen</h3>
+        </div>
+    </article>
+
+    <!--Pokedex-->
+    <div id="pokedex" class="pokedex-container">
+        <form action="" onsubmit="searchPokemon(event)">
+            <input type="text" name="pokemon" autocomplete="off" placeholder="buscar pokemon">
+        </form>
+        <div data-poke-card class="poke-card">
+            <div data-poke-name>Pokedex</div>
+            <div data-poke-img-container class="img-container">
+                <img data-poke-img class="poke-img" src="img/poke-shadow.png" alt="">
+            </div>
+            <div data-poke-id></div>
+            <div data-poke-types class="poke-types"></div>
+            <div data-poke-stats class="poke-stats"></div>
+        </div>
+        <article class="tabla-pokemons">
+            <div class="conteiner" id="container"></div>
+            </article>
+        </div>
+
+        <!--Navegador Pokemon-->
+        <header class="navegador">
+            <div class="navegador-container">
+                <i class="fa-solid fa-x btn-close"></i>
+            </div>
+            <div class="pokeball">
+                <img src="img/Poké_Ball_icon.png" alt="">
+            </div>
+            <div class="navegador-links">
+                <a href="#inicio"><i class="fa-solid fa-caret-right"></i> Inicio</a>
+                <a href="#como-buscar"><i class="fa-solid fa-caret-right"></i> Como se busca?</a>
+                <a href="#pokedex"><i class="fa-solid fa-caret-right"></i> Pokedex</a>
+                <a href="#equipo"><i class="fa-solid fa-caret-right"></i> Equipo</a>
+            </div>
+            <div class="navegador-redes">
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <p>"Dani no estuvo aqui"</p>
+            </div>
+        </header>
+
+        <!--Equipos-->
+        <section id="equipo" class="equipos">
+        <h3>MI EQUIPO POKEMON</h3>
+        <div class="equipos-container">
+            <div class="avatar-pokemon-team">
+                <img src="img/red.png" alt="Dani-Red">
+            </div>
+            <div class="cards-pokemon-team">
+                <!--Gyarados-->
+                <div class="card-pokemon">
+                    <img src="img/gyarados.png" alt="">
+                    <h4>Gyarados</h4>
+                    <p class="card-pokemon-utilidad"> Utilidad 80% </p>
+                    <p class="card-pokemon-especialidad"> Especialidad: Golpes acuaticos </p>
+                    <p class="card-pokemon-utilidad"> Fuerte contra: Normal, pieda </p>
+                    <p class="card-pokemon-utilidad"> Debil contra: electricos, fuego </p>
+                </div>
+                <!--Charizard-->
+                <div class="card-pokemon">
+                    <img src="img/charizard.png" alt="">
+                    <h4>Charizard</h4>
+                    <p class="card-pokemon-utilidad"> Utilidad 90% </p>
+                    <p class="card-pokemon-especialidad"> Especialidad: llamaradas </p>
+                    <p class="card-pokemon-utilidad"> Fuerte contra: agua, planta </p>
+                    <p class="card-pokemon-utilidad"> Debil contra: piedra, psiquico</p>
+                </div>
+                <!--MewTwo-->
+                <div class="card-pokemon">
+                    <img src="img/mewtwo.png" alt="">
+                    <h4>Mewtwo</h4>
+                    <p class="card-pokemon-utilidad"> Utilidad 100% </p>
+                    <p class="card-pokemon-especialidad"> Especialidad: Poder Psiquico </p>
+                    <p class="card-pokemon-utilidad"> Fuerte contra: Todos </p>
+                    <p class="card-pokemon-utilidad"> Debil contra: fuego </p>
+                </div>
+                <!--Dragonite-->
+                <div class="card-pokemon">
+                    <img class="dragonite" src="img/dragonite.png" alt="">
+                    <h4>Dragonite</h4>
+                    <p class="card-pokemon-utilidad"> Utilidad 85% </p>
+                    <p class="card-pokemon-especialidad"> Especialidad: Golpes Voladores </p>
+                    <p class="card-pokemon-utilidad"> Fuerte contra: agua, planta </p>
+                    <p class="card-pokemon-utilidad"> Debil contra: electricos, piedra </p>
+                </div>     
+                <!--Zapdos-->
+                <div class="card-pokemon">
+                    <img class="zapdos" src="img/zapdos.png" alt="">
+                    <h4>Zapdos</h4>
+                    <p class="card-pokemon-utilidad"> Utilidad 95% </p>
+                    <p class="card-pokemon-especialidad"> Especialidad: Rayos </p>
+                    <p class="card-pokemon-utilidad"> Fuerte contra: voladores, planta </p>
+                    <p class="card-pokemon-utilidad"> Debil contra: piedra, agua </p>
+                </div>
+                <!--Articuno-->
+                <div class="card-pokemon">
+                    <img src="img/articuno.png" alt="">
+                    <h4>Articuno</h4>
+                    <p class="card-pokemon-utilidad"> Utilidad 100% </p>
+                    <p class="card-pokemon-especialidad"> Especialidad: Golpes Helados </p>
+                    <p class="card-pokemon-utilidad"> Fuerte contra: planta, fuego </p>
+                    <p class="card-pokemon-utilidad"> Debil contra: piedra, electricos </p>
+                </div>                            
+            </div>
+        </div>
+        </section>
+
+
+    <!--Links JS-->
+    <script src="js/pokedex.js" type="text/javascript" defer></script>
+    <script src="js/header.js"></script>
+    <script src="js/pokemones.js"></script>
+</body>
+</html>
